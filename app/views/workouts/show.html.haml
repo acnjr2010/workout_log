@@ -1,8 +1,8 @@
 #workout
-  %p= @workout.date
-  %p= @workout.workout
-  %p= @workout.mood
-  %p= @workout.length
+  %p= "Date: #{@workout.date.strftime("%A %B %d")}"
+  %p= "Exercise: #{@workout.workout}"
+  %p= "Mood: #{@workout.mood}"
+  %p= "Length: #{@workout.length}"
 
 #exercises
   %h2 Exercises
@@ -10,7 +10,7 @@
 
   %h3 Add an exercise
   = render "exercises/form"
-  
+
 = link_to 'Back', root_path
 |
 = link_to 'Edit', edit_workout_path(@workout)
